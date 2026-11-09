@@ -1,0 +1,25 @@
+
+{
+  "manifest_version": 3,
+  "name": "Anuj's YT RAG",
+  "version": "1.0.0",
+  "description": "An AI assistant for YouTube videos.",
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
