@@ -1,0 +1,26 @@
+# Install a CUDA-enabled PyTorch build separately first:
+# https://pytorch.org/get-started/locally/
+#
+# Then install the remaining dependencies:
+# pip install -r requirements.txt
+
+# Model inference and quantization
+transformers>=4.51.0
+accelerate>=1.0.0
+bitsandbytes>=0.45.0
+
+# Embeddings and vector search
+sentence-transformers>=3.0.0
+langchain-huggingface>=0.1.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+faiss-cpu>=1.8.0
+
+# YouTube transcript retrieval
+youtube-transcript-api>=1.0.0
+
+# API server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# PyTorch is installed separately with the appropriate CUDA build.
